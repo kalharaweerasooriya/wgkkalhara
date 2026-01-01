@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #222;
+}
+
+/* MOBILE HEADER */
+.mobile-header {
+  display: none;
+  background: #0f1115;
+  color: #fff;
+  text-align: center;
+  padding: 25px 15px;
+  animation: zoomFade 0.9s ease forwards;
+}
+
+.mobile-header h1 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.mobile-info p {
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 6px;
+}
+
+/* MAIN LAYOUT */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+/* LEFT */
+.left {
+  width: 35%;
+  background: #0f1115;
+  color: #fff;
+  padding: 25px;
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.left h3 {
+  letter-spacing: 2px;
+}
+
+.line {
+  width: 60px;
+  height: 3px;
+  background: #00bcd4;
+  margin: 10px 0 20px;
+}
+
+.left p {
+  font-size: 14px;
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+
+/* RIGHT */
+.right {
+  width: 65%;
+  padding: 40px;
+}
+
+.right h1 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.badge {
+  display: inline-block;
+  background: #1e88e5;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+section {
+  margin-bottom: 28px;
+}
+
+section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-left: 4px solid #1e88e5;
+  padding-left: 10px;
+}
+
+section p,
+section li {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+/* SOCIAL */
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.social a {
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  background: #1e88e5;
+  transform: translateY(-3px);
+}
+
+/* ANIMATION */
+@keyframes zoomFade {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade {
+  animation: zoomFade 0.9s ease forwards;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .mobile-header {
+    display: block;
+  }
+
+  .container {
+    flex-direction: column;
+    margin: 15px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .right h1,
+  .right .badge {
+    display: none;
+  }
+
+  .line {
+    margin: 10px auto 20px;
+  }
+
+  .social {
+    justify-content: center;
+  }
+}
